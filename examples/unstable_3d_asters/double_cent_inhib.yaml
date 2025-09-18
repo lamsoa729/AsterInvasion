@@ -1,0 +1,44 @@
+## Simulation parameters
+
+# Integration parameters
+t_total: 7200 # Total time of simulation
+t_snap: 10. # Time between snapshots
+dt: .01 # Time step
+#rng_seed: ChiSeed([5,11])
+#rng_seed: ChiParam(format_str = "s{:d}", paramtype=int, values=[5,6,7,8,9,10])
+rng_seed: 9
+
+# Box parameters
+Lx: 313.1 # Box size in x [um]
+Ly: 313.1 # Box size in y [um]
+Lz: 50 # Box size in z [um]
+dimension: 3
+
+# Microtubule parameters
+diam: .025 # Diameter of microtubules
+vg: .35 # Growth velocity [um/s]
+vs: .55 # Shrink velocity [um/s]
+kc: 0.042 # Rate catastrophe [s^-1]
+ang_senstv: 22. # Sensitivity to angle
+## Turn on interactions
+inhib_range: 2 # Range to calculate inhibition
+inhib_strength: 7.5 # Strength of inhibition
+## Turn off interactions
+#inhib_range: .0 # Range to calculate inhibition
+#inhib_strength: .0 # Strength of inhibition
+
+# Nucleator parameters
+n_nucs: 10000 # Number of nucleators
+kb: .000047 # Nucleator binding rate [um^-1 s^-1]
+std_ang: 0.15707963 # Standard deviation of nucleating angle [rad]
+
+# Centrosome parameters
+centrosome: True # Whether to include centrosomes
+nuc_rate: .5 # Nucleation at centrosome rate [s^-1]
+
+# Other parameters
+cuda: True
+file_name: "double_cent_inhib.h5" # File name to save data
+mt_file: "mt_init.csv" # File name to save MT data
+# nuc_file: "nuc_init.csv" # File name to save nucleator data
+centrosome_file: "centrosome_init.csv" # File name to save centrosome data

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aster_invasion"
+version = "0.1.0"
+description = "Simulation software for 3D asters with microtubule inhibitory actions."
+authors = [
+    {name = "Adam Reay Lamson", email = "adam.r.lamson@gmail.com"}
+]
+license = {text = "Apache Software License 2.0"}
+readme = "README.rst"
+requires-python = ">=3.6"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+]
+keywords = ["aster_invasion"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = []  # You can populate this from your requirements.txt
+
+[project.urls]
+Homepage = "https://github.com/lamsoa729/aster_invasion"
+
+[project.scripts]
+aster_invasion = "aster_invasion.aster_main:main"
+
+[tool.setuptools.packages.find]
+include = ["aster_invasion*"]
+
+[tool.setuptools.package-data]
+"*" = ["*"]
+

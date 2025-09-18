@@ -1,0 +1,38 @@
+## Simulation parameters
+
+# Integration parameters
+t_total: 60 # Total time of simulation
+t_snap: 1. # Time between snapshots
+dt: .01 # Time step
+rng_seed: 1234
+
+# Box parameters
+Lx: 140 # Box size in x [um]
+Ly: 140 # Box size in y [um]
+Lz: 140 # Box size in z [um]
+dimension: 2
+
+# Microtubule parameters
+diam: .025 # Diameter of microtubules
+vg: .35 # Growth velocity [um/s]
+vs: .55 # Shrink velocity [um/s]
+kc: 0.042 # Rate catastrophe [s^-1]
+ang_senstv: 22 # Sensitivity to angle
+inhib_range: .0 # Range to calculate inhibition
+inhib_strength: 0. # Strength of inhibition
+
+# Nucleator parameters
+n_nucs: 500 # Number of nucleators
+kb: .000047 # Nucleator binding rate [um^-1 s^-1]
+std_ang: 0.15707963 # Standard deviation of nucleating angle [rad]
+
+# Centrosome parameters
+centrosome: True # Whether to include centrosomes
+nuc_rate: 5 # Nucleation rate [s^-1]
+
+# Other parameters
+cuda: False
+file_name: "single_cent.h5" # File name to save data
+mt_file: "mt_init.csv" # File name to initialize MTs
+# nuc_file: "nuc_init.csv" # File name to initialize nucleators
+centrosome_file: "centrosome_init.csv" # File name to initialize centrosome

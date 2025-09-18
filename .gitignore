@@ -1,0 +1,17 @@
+.DS_Store
+**.eggs
+**.egg-info
+**.pytest_cache
+**.pyc
+**.h5
+**.hdf5
+**.vtk
+**.avi
+**.mp4
+**.log
+**.out
+**.err
+**__pycache__
+**.vscode
+
+data/**
